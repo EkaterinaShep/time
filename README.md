@@ -1,1 +1,1 @@
-# js-clock
+# JS Clock
