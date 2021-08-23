@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="JS Clock" />
+    <meta name="author" content="Ekaterina Shepeleva" />
+    <meta
+      name="description"
+      content="The application combines Clock, Alarm and Timer in one app"
+    />
+    <!-- Favicons -->
+    <link rel="icon" href="./assets/icons/favicon/light-theme/favicon.ico" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon/light-theme/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./assets/icons/favicon/light-theme/apple-touch-icon.png"
+    />
+    <link
+      rel="manifest"
+      href="./assets/icons/favicon/light-theme/site.webmanifest"
+    />
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./assets/fonts/roboto-v27-latin_cyrillic-regular.woff2"
+      crossorigin
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- Scripts -->
+    <script src="./set-theme.js"></script>
+    <title>JS Clock</title>
+  </head>
+  <body class="body">
+    <div class="app">
+      <!-- Header -->
+      <header class="header wrap">
+        <h1 class="h1 visually-hidden">JS Clock</h1>
+        <h1 class="h1 visually-hidden" hidden>JS Clock</h1>
+        <nav class="nav">
+          <ul class="list nav__list">
+            <li class="nav__list-item">
+              <a class="link nav__link--active" href="#clock">Clock</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link" href="#timer">Timer</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Switchers -->
+        <ul class="list switchers-list">
+          <li>
+            <label class="switcher lang">
+              <input type="checkbox" class="switcher__input" />
+              <span class="switcher__custom-box"></span>
+            </label>
+          </li>
+          <li>
+            <label class="switcher theme">
+              <input type="checkbox" class="switcher__input" />
+              <span class="switcher__custom-box"></span>
+            </label>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Main -->
+      <main class="main wrap">
+        <section class="main__clock" id="clock">
+          <div class="clock">
+            <div class="clock__face">
+              <div class="clock__number twelve">12</div>
+              <div class="clock__line"></div>
+              <div class="clock__line"></div>
+              <div class="clock__number three">3</div>
+              <div class="clock__line"></div>
+              <div class="clock__line"></div>
+              <div class="clock__number six">6</div>
+              <div class="clock__line"></div>
+              <div class="clock__line"></div>
+              <div class="clock__number nine">9</div>
+              <div class="clock__line"></div>
+              <div class="clock__line"></div>
+            </div>
+            <div class="clock__center"></div>
+            <div class="clock__hour-hand"></div>
+            <div class="clock__minute-hand"></div>
+            <div class="clock__second-hand"></div>
+            <div class="clock__12"></div>
+          </div>
+          <div class="dig-clock-date-container">
+            <p class="text digital-clock"></p>
+            <p class="text date"></p>
+          </div>
+        </section>
+        <!-- Timer -->
+        <section class="main__timer visually-hidden" id="timer">
+          <form class="timer__form" action="">
+            <button
+              class="btn timer__btn timer__btn--stop visually-hidden"
+              type="button"
+            >
+              Stop
+            </button>
+
+            <fieldset class="fieldset timer__fieldset">
+              <ul class="list timer__list">
+                <li class="timer__item">
+                  <label class="timer__item-label" for="timer-hours"
+                    >Hours</label
+                  >
+                  <input
+                    class="input timer__input"
+                    id="timer-hours"
+                    name="hours"
+                    type="number"
+                    value="0"
+                    min="-1"
+                    max="24"
+                    minlength="0"
+                    maxlength="2"
+                  />
+                  <div class="timer__btns-wrap">
+                    <button
+                      class="btn timer__input-btn timer__btn--plus"
+                      type="button"
+                    >
+                      +
+                    </button>
+                    <button
+                      class="btn timer__input-btn timer__btn--minus"
+                      type="button"
+                    >
+                      –
+                    </button>
+                  </div>
+                </li>
+                <li class="timer__item">
+                  <label class="timer__item-label" for="timer-minutes"
+                    >Minutes</label
+                  >
+                  <input
+                    class="input timer__input"
+                    id="timer-minutes"
+                    name="minutes"
+                    type="number"
+                    value="0"
+                    min="-1"
+                    max="60"
+                    minlength="0"
+                    maxlength="2"
+                  />
+                  <div class="timer__btns-wrap">
+                    <button
+                      class="btn timer__input-btn timer__btn--plus"
+                      type="button"
+                    >
+                      +
+                    </button>
+                    <button
+                      class="btn timer__input-btn timer__btn--minus"
+                      type="button"
+                    >
+                      –
+                    </button>
+                  </div>
+                </li>
+                <li class="timer__item">
+                  <label class="timer__item-label" for="timer-seconds"
+                    >Seconds</label
+                  >
+                  <input
+                    class="input timer__input"
+                    id="timer-seconds"
+                    name="seconds"
+                    type="number"
+                    value="0"
+                    min="-1"
+                    max="60"
+                    minlength="0"
+                    maxlength="2"
+                  />
+                  <div class="timer__btns-wrap">
+                    <button
+                      class="btn timer__input-btn timer__btn--plus"
+                      type="button"
+                    >
+                      +
+                    </button>
+                    <button
+                      class="btn timer__input-btn timer__btn--minus"
+                      type="button"
+                    >
+                      –
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+            <output
+              class="timer__output visually-hidden"
+              name="timer-output"
+              for="hours minutes seconds"
+            ></output>
+            <button class="btn timer__btn timer__btn--start" type="button">
+              Start
+            </button>
+            <button
+              class="btn timer__btn timer__btn--pause visually-hidden"
+              type="button"
+            >
+              Pause
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <audio class="timer-audio" src="./assets/audio/timer-finish.mp3"></audio>
+    <script src="index.js"></script>
+  </body>
+</html>
