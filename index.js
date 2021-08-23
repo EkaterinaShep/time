@@ -6,7 +6,7 @@ setBgToThemeSwitcher();
 
 
 function setBgToThemeSwitcher() {
-  if (prefersDarkScheme.matches) {
+  if (prefersDarkScheme.matches && !localStorage.getItem('theme')) {
     themeSwitcher.children[0].setAttribute('checked', 'checked');
   }
 }
