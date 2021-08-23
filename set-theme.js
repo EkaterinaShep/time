@@ -7,6 +7,8 @@ function setTheme() {
     document.documentElement.classList.toggle(`${theme}-theme`);
 
     changeThemeSwitcherBg(theme);
+
+    return;
   }
 }
 
