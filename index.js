@@ -2,6 +2,15 @@
 const themeSwitcher = document.querySelector('.switcher.theme');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
+setBgToThemeSwitcher();
+
+
+function setBgToThemeSwitcher() {
+  if (prefersDarkScheme.matches) {
+    themeSwitcher.children[0].setAttribute('checked', 'checked');
+  }
+}
+
 themeSwitcher.addEventListener('change', switchTheme);
 
 function switchTheme() {
