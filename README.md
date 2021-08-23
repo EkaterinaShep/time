@@ -1,9 +1,7 @@
-<h1 align="center">JS ClockCV</h1>
+<h1 align="center">JS Clock</h1>
 <p align="center">
-
-
 <a href="https://ekaterinashep.github.io/js-clock/">Demo</a>
-
+</p>
 
 
 <p align="center">
